@@ -14,8 +14,7 @@ $iata_type = '^country|city|port|carrier$';
 /** @var $app Api\Application */
 
 $app->get('/user/{author_id}/travels', 'controller.travel:getPublishedByAuthor')
-    ->convert('author_id', $to_int)
-    ->bind('travel-published-by-author');
+    ->convert('author_id', $to_int);
 
 $app->post('/user', 'controller.user:createUser')
     ->bind('create-user');

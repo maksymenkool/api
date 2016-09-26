@@ -192,19 +192,14 @@ class TravelController extends ApiController
    /**
      * @param int   $author_id
      * @param User  $user
-     * @param bool  $minimized
      * @param int   $limit
      * @param int   $offset
      * @return array
      */
-    public function getPublishedByAuthor(
-        int $author_id,
-        User $user = null,
-        bool $minimized = true,
-        int $limit = 10,
-        int $offset = 0
-    ): array {
+    public function getPublishedByAuthor(int $author_id, User $user = null, int $limit = 10, int $offset = 0): array
+    {
         $travels = $this->travel_mapper->fetchPublishedByAuthorId($author_id, $limit, $offset);
+        $minimized = true;
         $favorite_ids = $user ? $this->travel_mapper->fetchFavoriteIds($user->getId()) : [];
         return $this->buildTravelSetView($travels, $favorite_ids, $minimized);
     }
