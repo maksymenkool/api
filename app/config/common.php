@@ -57,8 +57,10 @@ return [
         'password_salt' => 'oquaezooQuoo9Iex8haht9thewaa2Sae',
     ],
     'facebook' => [
-        'app_id' => 'xxx',
-        'app_secret' => 'xxx',
+        'app_id' => '1173433932777014',
+//        'app_id' => 'xxx',
+        'app_secret' => '1448b068954431f06a057e0110e4a14d',
+//        'app_secret' => 'xxx',
         'default_graph_version' => 'v2.5',
     ],
     'db' => [

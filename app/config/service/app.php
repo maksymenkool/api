@@ -80,11 +80,6 @@ $app->register(new MonologServiceProvider, [
     'monolog.name' => 'api',
 ]);
 
-// Event Subscriber
-$app->on(UpdatePicEvent::UPDATE_USER_PIC, function ($app) {
-    return [$app['user_pic_updater'], 'updateUserPic'];
-});
-
 // Pimple dumper
 if ($app['env'] === 'dev') {
     $app->register(new PimpleDumpProvider());

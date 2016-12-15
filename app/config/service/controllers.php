@@ -49,7 +49,8 @@ $app['controller.auth'] = function ($app) {
         $app['security.session_manager'],
         $app['facebook'],
         $app['password_generator'],
-        $app['dispatcher']
+        $app['dispatcher'],
+        $app['image_copier']
     );
     $controller->setLogger($app['monolog']);
     return $controller;
